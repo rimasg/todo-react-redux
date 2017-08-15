@@ -1,5 +1,7 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+
+import TasksPage from "./views/pages/tasks";
 
 class App extends Component {
   render() {
@@ -8,9 +10,7 @@ class App extends Component {
         <div className="App-header">
           <h2>Todo App</h2>
         </div>
-        <p className="App-intro">
-          Work in progress...
-        </p>
+        <TasksPage />
       </div>
     );
   }
