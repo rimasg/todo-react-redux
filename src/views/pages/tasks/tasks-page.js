@@ -3,9 +3,15 @@ import PropTypes from "prop-types";
 import { List } from "immutable";
 import { connect } from "react-redux";
 
+import TasksFilter from "../../components/task-filters";
 import TasksList from "../../components/task-list";
 
 class TasksPage extends Component {
+
+  handleFilter = (filter) => {
+    console.log("Filter: " + filter);
+  }
+
   render() {
     return (
       <div className="container-fluid">
@@ -16,7 +22,7 @@ class TasksPage extends Component {
           </button>
         </div>
         <div className="row">
-            Filter Todos
+          <TasksFilter onFilter={this.handleFilter}/>
         </div>
         <div className="row">
           <TasksList />

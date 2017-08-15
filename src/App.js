@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
+import { Provider } from "react-redux";
+import { store } from "./store";
 
 import TasksPage from "./views/pages/tasks";
 
@@ -10,7 +12,9 @@ class App extends Component {
         <div className="App-header">
           <h2>Todo App</h2>
         </div>
-        <TasksPage />
+        <Provider store={store}>
+          <TasksPage />
+        </Provider>
       </div>
     );
   }
