@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { List } from "immutable";
 import { connect } from "react-redux";
 
-class TaskItem extends Component {
+export class TaskItem extends Component {
   renderTaskItem() {
     const { id } = this.props;
     return (`Task Item #${id}`);

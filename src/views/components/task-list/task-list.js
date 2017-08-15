@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 
 import TasksItem from "../task-item";
 
-class TasksList extends Component {
+export class TasksList extends Component {
   render() {
     return (
       <div>

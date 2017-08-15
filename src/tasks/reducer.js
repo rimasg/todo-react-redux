@@ -7,25 +7,25 @@ import {
 } from "./action-types";
 
 export const TaskState = new Record({
-    filter: "",
-    list: new List()
+  filter: "",
+  list: new List()
 });
 
-export const tasksReducer = (state = new TaskState(), {type, payload}) => {
-    switch (type) {
-        case ADD_TASK:
-            console.log(payload);
-            break;
-        case REMOVE_TASK:
-            console.log(payload);
-            break;
-        case TOGGLE_TASK:
-            console.log(payload);
-            break;
-        case FILTER_TASKS:
-            console.log(payload);
-            break;
-        default:
-            break;
-    }
-}
+export const tasksReducer = (state = new TaskState(), { type, payload }) => {
+  switch (type) {
+    case ADD_TASK:
+      console.log(payload);
+      return state;
+    case REMOVE_TASK:
+      console.log(payload);
+      return state;
+    case TOGGLE_TASK:
+      console.log(payload);
+      return state;
+    case FILTER_TASKS:
+      console.log(payload);
+      return state;
+    default:
+      return state;
+  }
+};

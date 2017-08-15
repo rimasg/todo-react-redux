@@ -5,24 +5,24 @@ import { connect } from "react-redux";
 
 import TasksFilter from "../../components/task-filters";
 import TasksList from "../../components/task-list";
+import TaskForm from "../../components/task-form";
 
-class TasksPage extends Component {
-
-  handleFilter = (filter) => {
+export class TasksPage extends Component {
+  handleFilter = filter => {
     console.log("Filter: " + filter);
-  }
+  };
 
   render() {
     return (
       <div className="container-fluid">
         <div className="row">
-          Add Todo {" "}
+          <TaskForm />
           <button type="button" className="btn btn-primary">
             Add Todos
           </button>
         </div>
         <div className="row">
-          <TasksFilter onFilter={this.handleFilter}/>
+          <TasksFilter onFilter={this.handleFilter} />
         </div>
         <div className="row">
           <TasksList />
