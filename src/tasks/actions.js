@@ -5,10 +5,13 @@ import {
   FILTER_TASKS
 } from "./action-types";
 
+let nextId = 0;
 export const addTask = title => {
   return {
     type: ADD_TASK,
-    payload: title
+    payload: {
+      id: nextId++,
+      title: title}
   };
 };
 

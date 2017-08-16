@@ -31,7 +31,6 @@ export class TaskForm extends Component {
     e.preventDefault();
     const title = this.state.title.trim();
     this.props.addTask(title)
-    console.log(`Submited Todo: ${title}`);
     this.clearInput();
   };
 

@@ -6,7 +6,7 @@ import { connect } from "react-redux";
 export class TaskItem extends Component {
   renderTaskItem() {
     const { task } = this.props;
-    return (task);
+    return (`${task.id} - ${task.title}: ${task.completed}`);
   }
 
   render() {

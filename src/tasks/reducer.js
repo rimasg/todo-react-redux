@@ -5,6 +5,7 @@ import {
   TOGGLE_TASK,
   FILTER_TASKS
 } from "./action-types";
+import { Task } from "./task";
 
 export const TaskState = new Record({
   filter: "",
@@ -14,8 +15,7 @@ export const TaskState = new Record({
 export const tasksReducer = (state = new TaskState(), { type, payload }) => {
   switch (type) {
     case ADD_TASK:
-      console.log(payload);
-      return {list: state.list.push(payload)};
+      return state.merge({list: state.list.push(new Task({id: payload.id, title: payload.title}))});
     case REMOVE_TASK:
       console.log(payload);
       return state;
