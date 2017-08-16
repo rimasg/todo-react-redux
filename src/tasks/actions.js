@@ -28,7 +28,7 @@ export const toggleTask = id => {
 
 export const filterTask = filter => {
   return {
-    type: TOGGLE_TASK,
+    type: FILTER_TASKS,
     payload: filter
   };
 };
