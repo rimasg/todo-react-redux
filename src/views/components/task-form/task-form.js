@@ -1,5 +1,10 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { createSelector } from "reselect";
+
+import { tasksActions } from "../../../tasks";
+import { getTasks } from "../../../tasks";
 
 export class TaskForm extends Component {
   ESCAPE_KEY = 27;
@@ -25,6 +30,7 @@ export class TaskForm extends Component {
   handleSubmit = e => {
     e.preventDefault();
     const title = this.state.title.trim();
+    this.props.addTask(title)
     console.log(`Submited Todo: ${title}`);
     this.clearInput();
   };
@@ -47,4 +53,7 @@ export class TaskForm extends Component {
   }
 }
 
-export default TaskForm;
+
+const mapDispatchToProps = Object.assign({}, tasksActions);
+
+export default connect(null, mapDispatchToProps)(TaskForm);

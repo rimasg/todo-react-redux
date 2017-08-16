@@ -15,7 +15,7 @@ export const tasksReducer = (state = new TaskState(), { type, payload }) => {
   switch (type) {
     case ADD_TASK:
       console.log(payload);
-      return state;
+      return {list: state.list.push(payload.title)};
     case REMOVE_TASK:
       console.log(payload);
       return state;

@@ -5,8 +5,8 @@ import { connect } from "react-redux";
 
 export class TaskItem extends Component {
   renderTaskItem() {
-    const { id } = this.props;
-    return (`Task Item #${id}`);
+    const { task } = this.props;
+    return (task);
   }
 
   render() {
