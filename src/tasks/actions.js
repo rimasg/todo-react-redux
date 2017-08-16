@@ -9,9 +9,7 @@ let nextId = 0;
 export const addTask = title => {
   return {
     type: ADD_TASK,
-    payload: {
-      id: nextId++,
-      title: title}
+    payload: { id: nextId++, title: title}
   };
 };
 

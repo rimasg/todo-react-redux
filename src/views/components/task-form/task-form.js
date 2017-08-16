@@ -30,7 +30,7 @@ export class TaskForm extends Component {
   handleSubmit = e => {
     e.preventDefault();
     const title = this.state.title.trim();
-    this.props.addTask(title)
+    if (title.length) this.props.addTask(title)
     this.clearInput();
   };
 

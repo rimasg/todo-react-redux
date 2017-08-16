@@ -15,12 +15,17 @@ export const TaskState = new Record({
 export const tasksReducer = (state = new TaskState(), { type, payload }) => {
   switch (type) {
     case ADD_TASK:
-      return state.merge({list: state.list.push(new Task({id: payload.id, title: payload.title}))});
+      return state.merge({
+        list: state.list.push(
+          new Task({ id: payload.id, title: payload.title })
+        )
+      });
     case REMOVE_TASK:
-      console.log(payload);
-      return state;
+      return state.merge({
+        list: state.list.filter(task => task.id !== payload)
+      });
     case TOGGLE_TASK:
-      console.log(payload);
+      console.log("Toggle: " + payload);
       return state;
     case FILTER_TASKS:
       console.log(payload);
