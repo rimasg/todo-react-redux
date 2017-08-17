@@ -9,21 +9,21 @@ let nextId = 0;
 export const addTask = title => {
   return {
     type: ADD_TASK,
-    payload: { id: nextId++, title: title}
+    payload: { id: nextId++, title: title }
   };
 };
 
 export const removeTask = id => {
   return {
     type: REMOVE_TASK,
-    payload: id
+    payload: { id: id }
   };
 };
 
-export const toggleTask = id => {
+export const toggleTask = task => {
   return {
     type: TOGGLE_TASK,
-    payload: id
+    payload: task
   };
 };
 

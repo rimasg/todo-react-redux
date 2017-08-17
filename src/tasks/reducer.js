@@ -22,11 +22,12 @@ export const tasksReducer = (state = new TaskState(), { type, payload }) => {
       });
     case REMOVE_TASK:
       return state.merge({
-        list: state.list.filter(task => task.id !== payload)
+        list: state.list.filter(task => task.id !== payload.id)
       });
     case TOGGLE_TASK:
-      console.log("Toggle: " + payload);
-      return state;
+      return state.merge({
+        list: state.list.map(task => (task.id === payload.id ? payload : task))
+      });
     case FILTER_TASKS:
       console.log(payload);
       return state;

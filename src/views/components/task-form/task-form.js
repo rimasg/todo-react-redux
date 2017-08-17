@@ -52,7 +52,6 @@ export class TaskForm extends Component {
   }
 }
 
-
 const mapDispatchToProps = Object.assign({}, tasksActions);
 
 export default connect(null, mapDispatchToProps)(TaskForm);
