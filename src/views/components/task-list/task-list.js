@@ -1,12 +1,10 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { List } from "immutable";
 import { connect } from "react-redux";
 import { createSelector } from "reselect";
 
 import TasksItem from "../task-item";
-import { tasksActions } from "../../../tasks";
-import { getTasks } from "../../../tasks";
+import { tasksActions, getTasks } from "../../../tasks";
 
 export class TasksList extends Component {
   render() {

@@ -29,8 +29,9 @@ export const tasksReducer = (state = new TaskState(), { type, payload }) => {
         list: state.list.map(task => (task.id === payload.id ? payload : task))
       });
     case FILTER_TASKS:
-      console.log(payload);
-      return state;
+      return state.merge({
+        filter: payload.filter
+      });
     default:
       return state;
   }

@@ -30,6 +30,6 @@ export const toggleTask = task => {
 export const filterTask = filter => {
   return {
     type: FILTER_TASKS,
-    payload: filter
+    payload: {filter : filter}
   };
 };

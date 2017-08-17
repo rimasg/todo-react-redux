@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { createSelector } from "reselect";
 
 import { tasksActions } from "../../../tasks";
-import { getTasks } from "../../../tasks";
 
 export class TaskForm extends Component {
   ESCAPE_KEY = 27;

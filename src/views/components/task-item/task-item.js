@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { List } from "immutable";
-import { connect } from "react-redux";
 import classNames from "classnames";
 
 import { Task } from "../../../tasks";
