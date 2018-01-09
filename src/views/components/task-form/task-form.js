@@ -45,6 +45,9 @@ export class TaskForm extends Component {
           type="text"
           value={this.state.title}
         />
+        <button type="button" className="btn btn-primary" onClick={this.handleSubmit}>
+          Add Todo
+        </button>
       </form>
     );
   }

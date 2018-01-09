@@ -11,9 +11,6 @@ export class TasksPage extends Component {
       <div className="container-fluid">
         <div className="row">
           <TaskForm />
-          <button type="button" className="btn btn-primary">
-            Add Todos
-          </button>
         </div>
         <div className="row">
           <TasksFilter />
