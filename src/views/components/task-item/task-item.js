@@ -20,9 +20,9 @@ export class TaskItem extends Component {
     const { task } = this.props;
     return(
       <div className={classNames({'completed': task.completed})}>
-        <a href="#" onClick={() => this.handleToggleTask(task)}>[ ]</a>
+        <button onClick={() => this.handleToggleTask(task)}><span aria-hidden="true">&#9633;</span></button>
         {task.id}: {task.title} {task.completed}
-        <a href="#" onClick={() => this.handleRemove(task.id)}>[X]</a>
+        <button type="button" onClick={() => this.handleRemove(task.id)}><span aria-hidden="true">&times;</span></button>
       </div>
     )
   }
